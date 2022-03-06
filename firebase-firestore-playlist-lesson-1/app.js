@@ -25,3 +25,7 @@ playersRef.on("value", function(data) {
 
 //use the off() method. This will remove all callbacks with the 'value' event type
 playersRef.off("value");
+
+
+// to detach all callbacks
+ playersRef.off();
