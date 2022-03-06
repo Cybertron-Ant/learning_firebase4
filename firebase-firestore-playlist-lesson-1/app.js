@@ -11,10 +11,16 @@ var email = "myemail@email.com";
 var password = "mypassword";
 
 
-//sign-in a user using the signInWithEmailAndPassword(email, password) method
-firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+//sign-in a user using the signInWithEmailAndPassword(email, password) method  
+var login = firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
   
   console.log(error.code);
   console.log(error.message);
   
 });//end sign in
+
+
+//check if user has logged in successfully
+if (login) {
+  console.log('Login Success');
+}
