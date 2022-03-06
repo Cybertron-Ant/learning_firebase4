@@ -7,4 +7,4 @@ var ref = db.ref('players');
 
 
 //grab a reference to the 'players' that is a child of(nested inside) the 'players' collection
-var lastPlayerRef = firebase.database().ref("/players/players");
+var playersRef = firebase.database().ref("/players/players");
