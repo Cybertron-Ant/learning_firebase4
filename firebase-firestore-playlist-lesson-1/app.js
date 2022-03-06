@@ -9,3 +9,12 @@
 //define variables to hold email and password
 var email = "myemail@email.com";
 var password = "mypassword";
+
+
+//sign-in a user using the signInWithEmailAndPassword(email, password) method
+firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+  
+  console.log(error.code);
+  console.log(error.message);
+  
+});//end sign in
