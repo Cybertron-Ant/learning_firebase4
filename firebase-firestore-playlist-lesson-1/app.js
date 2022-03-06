@@ -8,3 +8,12 @@ var ref = db.ref('players');
 
 //grab a reference to the 'players' that is a child of(nested inside) the 'players' collection
 var playersRef = firebase.database().ref("/players/players");
+
+
+//use the equalTo method and chain the on() method to retrieve data ordered by "name". This method is taking the event type as "child_added" and then retrieves the snapshot of the data. 
+playersRef.orderByChild("name").equalTo("John").on("child_added", function(data) {
+
+   //access the value of the 'data' object using the 'val()' method, then access its 'name' property
+   console.log("Equal to filter: " + data.val().name);
+
+});
