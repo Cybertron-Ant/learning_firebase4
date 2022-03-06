@@ -21,3 +21,7 @@ playersRef.on("value", function(data) {
    console.log("Error: " + error.code);
 
 });
+
+
+//use the off() method. This will remove all callbacks with the 'value' event type
+playersRef.off("value");
